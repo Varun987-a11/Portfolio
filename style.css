@@ -1,0 +1,315 @@
+/* === Global Reset and Variables === */
+:root {
+  /* Gradient-Themed Colors */
+  --primary-color: #00b7ff;
+  --secondary-color: #00ffa3;
+  --accent-color: #ffde59;
+  --background-color: #0d0d0f;
+  --card-background: #16171a;
+  --text-color: #e8f0ff;
+  --muted-text: #a9b3c1;
+  --border-color: #242424;
+  --shadow-glow: 0 0 18px rgba(0, 183, 255, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #f7f9fc 0%, #e9eff5 100%);
+  font-family: "Inter", sans-serif;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+}
+
+/* === Body & Typography === */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0d0d0f 0%, #101317 100%);
+  color: var(--text-color);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  letter-spacing: 0.5px;
+}
+
+/* === Header === */
+header {
+  background: rgba(20, 20, 22, 0.85);
+  backdrop-filter: blur(10px);
+  padding: 20px 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+header h1 {
+  font-size: 1.8em;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  animation: fadeInDown 1.2s ease;
+}
+
+/* === Navigation === */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  color: var(--muted-text);
+  font-weight: 500;
+  font-size: 1.05em;
+  transition: color 0.3s, transform 0.2s;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+nav ul li a:hover {
+  color: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+/* === Main Layout === */
+main {
+  flex: 1;
+  padding: 70px 25px;
+  max-width: 1100px;
+  margin: auto;
+  width: 100%;
+  animation: fadeIn 1.2s ease;
+}
+
+/* === Section Styling === */
+section {
+  background: var(--card-background);
+  padding: 35px;
+  border-radius: 14px;
+  margin-bottom: 35px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6), 0 0 10px rgba(0, 255, 163, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--border-color);
+}
+
+section:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-glow);
+}
+
+/* === Headings === */
+h2 {
+  color: var(--secondary-color);
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  border-left: 5px solid var(--primary-color);
+  padding-left: 12px;
+  font-weight: 600;
+}
+
+/* === Home Page === */
+.home-intro {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  margin-top: 10px;
+}
+
+.intro-text {
+  flex: 2;
+  animation: slideInLeft 1s ease;
+}
+
+.intro-text h2 {
+  color: var(--accent-color);
+  border: none;
+  font-size: 2em;
+}
+
+.intro-photo {
+  flex: 1;
+  text-align: center;
+  animation: slideInRight 1s ease;
+}
+
+.intro-photo img {
+  width: 100%;
+  max-width: 240px;
+  border-radius: 50%;
+  border: 4px solid var(--secondary-color);
+  box-shadow: 0 0 20px var(--secondary-color);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.intro-photo img:hover {
+  transform: scale(1.06) rotate(3deg);
+  box-shadow: 0 0 35px var(--primary-color);
+}
+
+/* === Buttons === */
+.btn-group {
+  margin-top: 25px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  margin-right: 15px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  color: #0e0e0e;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 0 15px rgba(0, 255, 163, 0.3);
+}
+
+/* === Lists === */
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  margin: 12px 0;
+  padding-left: 20px;
+  position: relative;
+}
+
+ul li::before {
+  content: '▹';
+  color: var(--primary-color);
+  position: absolute;
+  left: 0;
+}
+
+/* === Bio-data Table === */
+.biodata-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #101215;
+  box-shadow: 0 0 20px rgba(0, 183, 255, 0.05);
+}
+
+.biodata-table th,
+.biodata-table td {
+  padding: 14px 16px;
+  border: 1px solid var(--border-color);
+}
+
+.biodata-table th {
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  color: #000;
+  text-align: left;
+  font-weight: 600;
+  width: 35%;
+}
+
+.biodata-table td {
+  background: var(--card-background);
+}
+
+.biodata-table tr:nth-child(even) td {
+  background: #18191d;
+}
+
+.biodata-table tr:hover td {
+  background: #212227;
+}
+
+/* === Footer === */
+footer {
+  background: rgba(20, 20, 22, 0.9);
+  color: var(--muted-text);
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  border-top: 1px solid var(--border-color);
+}
+
+/* === Animations === */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* === Responsive Fix === */
+@media (max-width: 768px) {
+  .home-intro {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .intro-photo img {
+    max-width: 180px;
+  }
+}
