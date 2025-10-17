@@ -1,6 +1,5 @@
 /* === Global Reset and Variables === */
 :root {
-  /* Gradient-Themed Colors */
   --primary-color: #00b7ff;
   --secondary-color: #00ffa3;
   --accent-color: #ffde59;
@@ -19,21 +18,6 @@
 }
 
 body {
-  background: linear-gradient(135deg, #f7f9fc 0%, #e9eff5 100%);
-  font-family: "Inter", sans-serif;
-}
-
-.dashboard {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1rem;
-  max-width: 800px;
-  margin: auto;
-  padding: 2rem;
-}
-
-/* === Body & Typography === */
-body {
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(135deg, #0d0d0f 0%, #101317 100%);
   color: var(--text-color);
@@ -41,12 +25,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-attachment: fixed;
   overflow-x: hidden;
-}
-
-h1, h2, h3 {
-  letter-spacing: 0.5px;
 }
 
 /* === Header === */
@@ -59,6 +38,7 @@ header {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid var(--border-color);
+  flex-wrap: wrap;
 }
 
 header h1 {
@@ -69,6 +49,7 @@ header h1 {
   -webkit-text-fill-color: transparent;
   font-weight: 700;
   animation: fadeInDown 1.2s ease;
+  margin-bottom: 10px;
 }
 
 /* === Navigation === */
@@ -76,6 +57,8 @@ nav ul {
   list-style: none;
   display: flex;
   gap: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 nav ul li a {
@@ -117,7 +100,7 @@ main {
   animation: fadeIn 1.2s ease;
 }
 
-/* === Section Styling === */
+/* === Sections === */
 section {
   background: var(--card-background);
   padding: 35px;
@@ -143,19 +126,20 @@ h2 {
   font-weight: 600;
 }
 
-/* === Home Page === */
+/* === Home Page Intro === */
 .home-intro {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 60px;
+  gap: 40px;
   margin-top: 10px;
 }
 
 .intro-text {
   flex: 2;
   animation: slideInLeft 1s ease;
+  min-width: 250px;
 }
 
 .intro-text h2 {
@@ -168,6 +152,7 @@ h2 {
   flex: 1;
   text-align: center;
   animation: slideInRight 1s ease;
+  min-width: 180px;
 }
 
 .intro-photo img {
@@ -187,17 +172,21 @@ h2 {
 /* === Buttons === */
 .btn-group {
   margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
 .btn {
   display: inline-block;
   padding: 12px 25px;
-  margin-right: 15px;
   background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
   color: #0e0e0e;
   font-weight: 600;
   border-radius: 8px;
+  text-decoration: none;
   transition: all 0.3s ease;
+  text-align: center;
 }
 
 .btn:hover {
@@ -215,6 +204,7 @@ ul li {
   margin: 12px 0;
   padding-left: 20px;
   position: relative;
+  word-wrap: break-word;
 }
 
 ul li::before {
@@ -292,24 +282,58 @@ footer {
   to { opacity: 1; transform: translateX(0); }
 }
 
-/* === Responsive Fix === */
+/* === Responsive Fixes === */
+@media (max-width: 1024px) {
+  main {
+    padding: 50px 20px;
+  }
+}
+
 @media (max-width: 768px) {
   .home-intro {
     flex-direction: column;
     text-align: center;
+    gap: 25px;
   }
 
   nav ul {
     flex-direction: column;
     gap: 10px;
+    align-items: center;
   }
 
   header {
     flex-direction: column;
     align-items: center;
+    padding: 15px 20px;
   }
 
   .intro-photo img {
     max-width: 180px;
+  }
+
+  .btn-group {
+    justify-content: center;
+  }
+
+  section {
+    padding: 25px;
+    margin-bottom: 25px;
+  }
+
+  h2 {
+    font-size: 1.3em;
+    padding-left: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-text h2 {
+    font-size: 1.6em;
+  }
+
+  .btn {
+    padding: 10px 18px;
+    font-size: 0.95em;
   }
 }
