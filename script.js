@@ -88,6 +88,6 @@
 * (dark theme, modern style, simple animations) are covered by CSS.
 */
 $(document).ready(function(){
-  // Example for a more complex jQuery animation (optional)
+  // Exam ple for a more complex jQuery animation (optional)
   // $(".intro-text").hide().fadeIn(1500); 
 });
