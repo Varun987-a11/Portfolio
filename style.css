@@ -337,3 +337,75 @@ footer {
     font-size: 0.95em;
   }
 }
+/* --- 1. Project List Container Adjustments --- */
+ul.project-list {
+    list-style-type: none; 
+    padding-left: 0;
+}
+
+ul.project-list > li {
+    /* Reduced vertical spacing between project items */
+    margin-bottom: 15px; 
+    padding-left: 0; 
+    position: relative;
+    /* Reduced padding at the bottom */
+    padding-bottom: 10px; 
+    border-bottom: 1px dashed var(--border-color); 
+}
+
+ul.project-list > li::before {
+    content: none; 
+}
+
+/* --- 2. Internal Layout and Spacing Adjustments --- */
+.project-item {
+    display: flex;
+    flex-direction: column; 
+    /* Reduced gap between header and links */
+    gap: 5px; 
+}
+
+.project-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    /* Reduced gap between title and description */
+    gap: 6px; 
+}
+
+.project-header strong {
+    font-size: 1.05em; /* Slightly smaller font for title */
+    color: #00bfd1; 
+    min-width: 140px; /* Slightly reduced minimum width */
+}
+.project-header bold {
+    font-size: 1.05em;
+    color: #7648e0;
+    min-width: 140px;
+    font-weight: 900; /* Extremely bold */
+}
+
+
+.project-desc {
+    color: var(--muted-text);
+    /* Reduced margin/padding around the description text */
+    font-size: 0.95em; 
+}
+
+.project-links {
+    margin-left: 0;
+    /* Reduced gap between links */
+    gap: 10px; 
+    padding-left: 5px; 
+}
+
+.project-links a {
+    /* Reduced padding for smaller buttons */
+    padding: 2px 6px; 
+    color: #ffde59;
+    font-size: 0.9em; /* Smaller font for links */
+    font-weight: 500;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    transition: all var(--transition-speed);
+}

@@ -1,54 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home - Varun Kumar S</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Varun Kumar S</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">   <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js" defer></script>
 </head>
-<body>
-  <header>
-    <h1>Varun Kumar S</h1>
-    <!-- <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="resume.html">Resume</a></li>
-        <li><a href="biodata.html">Bio-data</a></li>
-      </ul>
-    </nav> -->
-  </header>
+<body id="body">
+  <header>
+    <h1 class="logo">Varun Kumar S</h1>
+    <nav>
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="resume.html" class="nav-link">Resume</a>
+      <a href="biodata.html" class="nav-link">Bio-data</a>
+    </nav>
+        <button id="theme-toggle" aria-label="Toggle dark/light mode">
+      <i class="fas fa-sun"></i>     </button>
+  </header>
 
-  <main>
-    <section class="home-intro">
-      
-      <div class="intro-text">
-  <h2>Hello<br> I’m Varun Kumar S </h2>
-  <p>
-    I am a BE Computer Science student at AJ Institute of Engineering & Technology, Mangalore, specializing in modern web and software development. I am passionate about coding, creating digital solutions, and leveraging technology to solve real-world problems.
-  </p>
-  <p>
-    I possess a foundational skill set in C/C++, Python, Java, and practical expertise in web Development: HTML, CSS3, JavaScript/jQuery, and MySQL for database management. I am committed to continuous learning and building scalable, impactful digital solutions, showcased in projects like <strong><a href="https://varun987-a11.github.io/Cosmic-Canvas" target="_blank">CosmiCanvas</a> </strong>
-  </p>
-  <p>
-    Explore my <strong>Resume</strong> for a detailed look at my technical skills, projects, and academic background, or view my <strong>Bio-data</strong> for formal personal and educational details.
-  </p>
-  <div class="btn-group">
-    <a href="resume.html" class="btn">View Resume</a>
-    <a href="biodata.html" class="btn">View Bio-data</a>
-  </div>
+  <main>
+    <section class="home-intro container">
+      
+      <div class="intro-text">
+  <h2>Hello, I’m <span class="highlight">Varun Kumar S</span> </h2>
+  <p>
+    I am a BE Computer Science student at AJ Institute of Engineering & Technology, Mangalore, specializing in modern web and software development. I am passionate about coding, creating digital solutions, and leveraging technology to solve real-world problems.
+  </p>
+  <p>
+    I possess a foundational skill set in C/C++, Python, Java, and practical expertise in web Development: HTML, CSS3, JavaScript/jQuery, and MySQL for database management. I am committed to continuous learning and building scalable, impactful digital solutions, showcased in projects like <strong><a href="https://varun987-a11.github.io/Cosmic-Canvas" target="_blank" class="project-link">CosmiCanvas</a></strong>
+  </p>
+  <p class="cta-message">
+    Explore my <strong>Resume</strong> for a detailed look at my technical skills, projects, and academic background, or view my <strong>Bio-data</strong> for formal personal and educational details.
+  </p>
+  <div class="btn-group">
+    <a href="resume.html" class="btn primary-btn">View Resume</a>
+    <a href="biodata.html" class="btn secondary-btn">View Bio-data</a>
+  </div>
 </div>
-      <div class="intro-photo">
-        <img src="profile.png" alt="Varun's profile photo" class="img-animated"> 
-      </div>
-    </section>
-  </main>
+      <div class="intro-photo">
+        <img src="profile.png" alt="Varun's profile photo" class="img-animated"> 
+      </div>
+    </section>
+  </main>
 
-  <footer>
-    <p>&copy; 2025 Varun Kumar S </p>
-  </footer>
+  <footer>
+    <p>&copy; 2025 Varun Kumar S</p>
+  </footer>
 </body>
 </html>
